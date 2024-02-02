@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/about', function () {
-    return 'Ini Halaman About';
+    return view('about');
 });
 
 Route::get('/servis', function () {
