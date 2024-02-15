@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Voters</title>
+<title>Query</title>
 </head>
 <body>
+<h1 align="center">Query</h1> 
 <table border="1">
+<tbody>
+@foreach($voter as $vote)
 <tr>
-<td>Shepherd</td><td>Ju Peter</td>
-<td>Topman</td><td>Warcury</td>
-<td>Ethanbaron</td><td>V. Nusjuro</td>
+    <td>{{ $vote->id }}</td>
+    <td>{{ $vote->name }}</td>
+    <td>{{ $vote->email }}</td>
+    <td>{{ $vote->alamat }}</td>
 </tr>
+@endforeach
+</tbody>
 </table>
 </body>
 </html>

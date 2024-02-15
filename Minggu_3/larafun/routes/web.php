@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VoterController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,8 @@ use App\Http\Controllers\UserController;
 |
 */
 
-
-Route::get('/voter', [VoterController::class, 'viewVoter']);
+Route::get('/task', [TaskController::class, 'index']);
+Route::get('/voters', [VoterController::class, 'viewVoter']);
 
 Route::get('/av_sc', [SubjectController::class, 'adminview']);
 Route::get('/sv_sc', [SubjectController::class, 'studentview']);
