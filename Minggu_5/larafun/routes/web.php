@@ -18,10 +18,11 @@ use App\Http\Controllers\TaskController;
 */
 
 Route::put('/task/{task}', [TaskController::class, 'update']);
-Route::get('/task/{task}/edit', [TaskController::class, 'edit'])->name('task.edit');
+Route::get('/task/{task}/edit', [TaskController::class, 'edit']);
 Route::post('/task/store', [TaskController::class, 'store']);
 Route::get('/task/create', [TaskController::class, 'create']);
 route::get('/task/{task}', [TaskController::class, 'show']);
+Route::delete('/task/{task}', [TaskController::class, 'delete']);
 
 
 Route::get('/task', [TaskController::class, 'index']);

@@ -13,9 +13,4 @@ class Task extends Model
         'name',
         'description',
     ];
-
-    protected $updateable = [
-        'name',
-        'description',
-    ];
 }
