@@ -48,7 +48,6 @@ Route::get('/servis', function () {
     return view('services');
 });
 
-
 Route::get("/", function(){
     return view('welcome');
 });
