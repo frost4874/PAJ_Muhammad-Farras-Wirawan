@@ -12,7 +12,7 @@ class VoterController extends Controller
     public function viewVoter()
     {
         // $voter=DB::table('voters')->get();
-        $voter=Voter::all();//orm
+        $voter=Voter::all(); //orm
         return view('voters',compact('voter'));
     }
 }

@@ -67,7 +67,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="bi bi-person-fill"></i>Selamat datang, {{ Auth::user()->name }}
+                <i class="bi bi-person-fill"></i>{{ Auth::user()->name }}
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="/pengaturan_akun">Pengaturan Akun</a></li>
