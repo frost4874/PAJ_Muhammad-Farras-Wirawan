@@ -9,6 +9,9 @@ use App\Http\Controllers\Login\LogoutController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\WebController;
+use App\Http\Controllers\MMController;
 
 
 /*
@@ -28,6 +31,10 @@ Route::post('/login', [LoginController::class, 'login']); //route post untuk log
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/forgot_password', [ForgotPasswordController::class, 'index']);
+
+Route::get('/anggota', [MMController::class, 'index']);
+Route::get('/article', [WebController::class, 'index']);
+Route::get('/pengguna', [PenggunaController::class, 'index']);
 
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth'); //route untuk dashboard diperlukan login terlebih dahulu
 Route::get('/pengaturan_akun', [UserController::class, 'option'])->middleware('auth'); //route untuk option diperlukan login terlebih dahulu
